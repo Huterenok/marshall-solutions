@@ -19,4 +19,16 @@ export const HeaderLinkContainer = styled.a.attrs(
   &:hover {
     color: ${Color.BLUE};
   }
+
+  @media (max-width: 1600px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 1300px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 1100px) {
+    font-size: 11px;
+  }
 `;

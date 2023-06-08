@@ -1,16 +1,25 @@
 import styled from "styled-components";
 
-import { Color, FontFamily, Transition } from "shared/config/cssVariables";
+import {
+  Color,
+  FontFamily,
+  FontSize,
+  Transition,
+} from "shared/config/cssVariables";
 import { ButtonSize, HoverColor } from "./Button";
 
 export const ButtonText = styled.div`
   font-family: ${FontFamily.BEBAS};
   color: ${Color.WHITE};
+  font-size: ${FontSize.M};
   font-weight: 400;
-  font-size: 22px;
 
   transition: ${Transition.DEFAULT};
   z-index: 3;
+
+  @media (max-width: 1600px) {
+    font-size: ${FontSize.S};
+  }
 `;
 
 export const ButtonBg = styled.div`
@@ -61,5 +70,10 @@ export const ButtonContainer = styled.button.attrs(
 
   &:hover ${ButtonBg} {
     opacity: 0;
+  }
+
+  @media (max-width: 1600px) {
+    width: ${(props) => (props.size == ButtonSize.M ? "168px" : "200px")};
+    height: ${(props) => (props.size == ButtonSize.M ? "32px" : "40px")};
   }
 `;

@@ -1,41 +1,12 @@
-import styled from "styled-components";
-
 import {
-  Color,
   FontFamily,
   FontSize,
+  Color,
   FontWeight,
 } from "shared/config/cssVariables";
+import styled from "styled-components";
 
-export const Container = styled.section`
-  padding-bottom: 48px;
-
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  position: relative;
-
-  scroll-margin-top: 93px;
-`;
-
-export const Title = styled.div`
-  margin-top: 12px;
-
-  font-weight: ${FontWeight.WEAK};
-  font-size: ${FontSize.S};
-  line-height: 22px;
-  color: ${Color.GREY100};
-
-  @media (max-width: 1000px) {
-    font-size: 12px;
-    line-height: 18px;
-  }
-`;
-
-export const Steps = styled.div`
+export const DesktopStepsContainer = styled.div`
   margin-top: 54px;
 
   position: relative;
@@ -65,6 +36,10 @@ export const Steps = styled.div`
 
   @media (max-width: 1200px) {
     padding: 0 16px;
+  }
+
+  @media (max-width: 1000px) {
+    display: none;
   }
 `;
 
@@ -114,10 +89,23 @@ export const StepItem = styled.div.attrs(
     @media (max-width: 1200px) {
       top: ${(props) => (props.isTop ? "168px" : "-70px")};
     }
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 
   @media (max-width: 1200px) {
     max-width: 220px;
+  }
+
+  @media (max-width: 1000px) {
+    margin-top: 24px;
+
+    max-width: 100%;
+
+    display: flex;
+    justify-content: start;
   }
 `;
 
@@ -139,6 +127,11 @@ export const StepItemTitle = styled.div`
     font-size: 18px;
     line-height: 18px;
   }
+  @media (max-width: 1000px) {
+    margin-left: 48px;
+
+    max-width: 100%;
+  }
 `;
 
 export const StepItemSubtitle = styled.div`
@@ -152,7 +145,7 @@ export const StepItemSubtitle = styled.div`
   color: ${Color.GREY100};
 
   @media (max-width: 1000px) {
-    max-width: 221px;
+    max-width: 100%;
 
     font-size: 14px;
     line-height: 20px;
@@ -171,10 +164,14 @@ export const StepItemIcon = styled.img`
     top: -18px;
     right: 0;
   }
-`;
 
-export const ButtonWrapper = styled.a`
-  margin-top: 60px;
+  @media (max-width: 1000px) {
+    width: 24px;
+    height: 36px;
+
+    top: -8px;
+    left: 0;
+  }
 `;
 
 export const EnjoyIcon = styled.img`
@@ -188,5 +185,18 @@ export const EnjoyIcon = styled.img`
   }
   @media (max-width: 1500px) {
     display: none;
+  }
+`;
+
+export const MobileStepsContainer = styled.div`
+  display: none;
+
+  @media (max-width: 1000px) {
+    padding: 0 24px;
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 24px;
   }
 `;

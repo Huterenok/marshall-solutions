@@ -11,7 +11,6 @@ export const AosProvider: FC<AosProviderProps> = ({ children }) => {
       easing: "ease-in",
       duration: 1000,
     });
-    console.log("AOS has inited");
   }, []);
 
   return children;

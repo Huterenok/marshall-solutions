@@ -1,4 +1,4 @@
-export const indexAnimation = (index: number, top: boolean): string => {
+export const indexAnimation = (index: number, top?: boolean): string => {
   if (top) {
     if (index == 0) {
       return "fade-down-right";

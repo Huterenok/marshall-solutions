@@ -20,10 +20,23 @@ export const ButtonUp = styled.button`
   bottom: 48px;
 
   cursor: pointer;
-  z-index: 5;
+  z-index: 4;
 
   &:hover ${IconActive} {
     transition: ${Transition.DEFAULT};
     opacity: 1;
+  }
+
+  @media (max-width: 1000px) {
+    width: 32px;
+    height: 32px;
+
+    right: 60px;
+    bottom: 32px;
+  }
+
+  @media (max-width: 500px) {
+    right: 16px;
+    bottom: 12px;
   }
 `;

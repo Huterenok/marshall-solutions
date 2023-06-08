@@ -16,6 +16,10 @@ export const Container = styled.form`
   background-color: ${Color.GREY0};
 
   border-radius: 16px;
+
+  @media (max-width: 1000px) {
+    margin-top: 24px;
+  }
 `;
 
 export const InputData = styled.div`
@@ -23,6 +27,11 @@ export const InputData = styled.div`
 
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const LiteralInputContainer = styled.div`
@@ -32,9 +41,23 @@ export const LiteralInputContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media (max-width: 1000px) {
+    max-width: 330px;
+  }
+  @media (max-width: 500px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  @media (max-width: 400px) {
+    padding: 0 29px;
+  }
 `;
 
 export const FileInputContainer = styled.div`
+  padding: 0 29px;
+
   max-width: 330px;
   width: 100%;
 
@@ -43,12 +66,26 @@ export const FileInputContainer = styled.div`
   color: ${Color.GREY100};
 
   position: relative;
+
+  @media (max-width: 1000px) {
+    margin-top: 24px;
+    margin-left: 36px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  @media (max-width: 400px) {
+    max-width: 240px;
+  }
 `;
 
 export const FileInputIcon = styled.img`
   position: absolute;
   top: 8px;
-  left: -38px;
+  left: -19px;
 `;
 
 interface FileInputBackProps {
@@ -76,6 +113,11 @@ export const FileInputBack = styled.p.attrs(
     background-clip: text;
     text-fill-color: transparent;
   }
+
+  @media (max-width: 500px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
 `;
 
 export const FileInput = styled.input`
@@ -96,4 +138,8 @@ export const LiteralInput = styled.input`
 
 export const ButtonWrapper = styled.div`
   margin-top: 48px;
+
+  @media (max-width: 1000px) {
+    margin-top: 24px;
+  }
 `;

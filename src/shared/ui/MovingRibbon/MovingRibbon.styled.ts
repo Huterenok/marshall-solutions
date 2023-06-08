@@ -32,4 +32,11 @@ export const RibbonText = styled.div`
 
   -webkit-text-stroke: 1px ${Color.GREY0};
   text-stroke: 1px ${Color.GREY0};
+
+  @media (max-width: 1000px) {
+    margin-left: 24px;
+
+    font-size: 32px;
+    line-height: 30px;
+  }
 `;

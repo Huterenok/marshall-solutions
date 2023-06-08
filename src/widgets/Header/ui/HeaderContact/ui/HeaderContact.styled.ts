@@ -6,6 +6,10 @@ export const HeaderContactContainer = styled.div`
   align-items: center;
 
   position: relative;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 export const TgDefaultIcon = styled.img``;
@@ -28,8 +32,17 @@ export const HeaderTelegram = styled.a`
   &:hover ${TgActiveIcon} {
     opacity: 1;
   }
+
+  @media (max-width: 1600px) {
+    width: 18px;
+    height: 15px;
+  }
 `;
 
 export const HeaderForm = styled.a`
   margin-left: ${Indent.XL};
+
+  @media (max-width: 1600px) {
+    margin-left: ${Indent.M};
+  }
 `;

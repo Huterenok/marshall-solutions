@@ -13,11 +13,16 @@ import {
   MouseImg,
   StarImg,
   Subtitle,
+  TgActiveIcon,
+  TgDefaultIcon,
+  TgIcon,
   Title,
 } from "./IntroductionWidget.styled";
 import Star from "./img/star.svg";
 import Mouse from "./img/mouse.svg";
 import Group from "./img/group.svg";
+import tgDefaultIcon from "widgets/Header/ui/img/tg.svg";
+import tgActiveIcon from "widgets/Header/ui/img/tgActive.svg";
 
 export const IntroductionWidget: FC = () => {
   return (
@@ -25,13 +30,9 @@ export const IntroductionWidget: FC = () => {
       <StarImg src={Star} />
       <Content>
         <Information>
-          <Title>
-            Blockchain solutions of <br />
-            any complexity
-          </Title>
+          <Title>Blockchain solutions of any complexity</Title>
           <Subtitle>
-            Comprehensive solutions for your business in a<br />
-            decentralized network
+            Comprehensive solutions for your business in a decentralized network
           </Subtitle>
           {/* FIX */}
           <ButtonWrapper href={`#${Path.CONTACT}`}>
@@ -40,7 +41,11 @@ export const IntroductionWidget: FC = () => {
         </Information>
         <GroupImg src={Group} />
       </Content>
-      <MouseImg src={Mouse} />
+      <MouseImg src={Mouse} data-aos="fade-up" />
+      <TgIcon href="https://t.me/scou24" target="_blank">
+        <TgDefaultIcon src={tgDefaultIcon} />
+        <TgActiveIcon src={tgActiveIcon} />
+      </TgIcon>
     </Container>
   );
 };
