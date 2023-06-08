@@ -43,7 +43,7 @@ export const DesktopStepsContainer = styled.div`
   }
 `;
 
-export const TopStepsContainer = styled.div`
+export const TopStepsContainer = styled.ul`
   max-width: 1135px;
 
   display: flex;
@@ -52,7 +52,7 @@ export const TopStepsContainer = styled.div`
   position: relative;
 `;
 
-export const DownStepsContainer = styled.div`
+export const DownStepsContainer = styled.ul`
   padding-top: 115px;
 
   display: flex;
@@ -66,7 +66,7 @@ interface StepItemProps {
   isTop: boolean;
 }
 
-export const StepItem = styled.div.attrs(
+export const StepItem = styled.li.attrs(
   (props: StepItemProps = { isTop: false }) => props
 )`
   position: relative;
@@ -188,7 +188,7 @@ export const EnjoyIcon = styled.img`
   }
 `;
 
-export const MobileStepsContainer = styled.div`
+export const MobileStepsContainer = styled.ul`
   display: none;
 
   @media (max-width: 1000px) {
@@ -196,7 +196,6 @@ export const MobileStepsContainer = styled.div`
 
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     gap: 24px;
   }
 `;

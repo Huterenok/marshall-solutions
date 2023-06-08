@@ -65,7 +65,7 @@ export const Title = styled.div`
   }
 `;
 
-export const ExpertiseItems = styled.div`
+export const ExpertiseItems = styled.ul`
   margin-top: 48px;
 
   max-width: 1170px;
@@ -96,7 +96,7 @@ export const ExpertiseItems = styled.div`
   }
 
   @media (max-width: 1000px) {
-    margin-top: 48px;
+    margin-top: 24px;
     padding: 0 120px;
 
     flex-direction: column;
@@ -113,7 +113,7 @@ interface ExpertiseItemProps {
   endOfLine: boolean;
 }
 
-export const ExpertiseItem = styled.div.attrs(
+export const ExpertiseItem = styled.li.attrs(
   (props: ExpertiseItemProps) => props
 )`
   max-width: 295px;

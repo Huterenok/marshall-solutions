@@ -30,7 +30,12 @@ export const Form: FC = () => {
       <InputData>
         <LiteralInputContainer>
           {inputs.map((item) => (
-            <LiteralInput key={item} type="text" placeholder={item} />
+            <LiteralInput
+              key={item[1]}
+              type="text"
+              name={item[1]}
+              placeholder={item[0]}
+            />
           ))}
         </LiteralInputContainer>
         <FileInputContainer>
