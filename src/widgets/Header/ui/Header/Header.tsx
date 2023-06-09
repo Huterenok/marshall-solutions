@@ -5,7 +5,7 @@ import { HeaderLinks } from "../HeaderLinks";
 import { HeaderContact } from "../HeaderContact";
 
 import { HeaderContainer, HeaderImg, MenuBtn } from "./Header.styled";
-import Logo from "../img/ms_logo.svg";
+import Logo from "../img/ms_logo_v2.svg";
 import MenuOpen from "../img/menuOpen.svg";
 
 export const Header: FC = () => {
