@@ -8,6 +8,8 @@ import {
   Indent,
   Transition,
 } from "shared/config/cssVariables";
+import leftBar from "./img/leftBar.svg";
+import rightBar from "./img/rightBar.svg";
 
 export const Container = styled.section`
   position: relative;
@@ -25,7 +27,7 @@ export const StarImg = styled.div`
 `;
 
 export const LittleStar = styled.img`
-  animation: starAppearing 5s infinite;
+  animation: starAppearing 5s;
 
   width: 44px;
   height: 44px;
@@ -34,41 +36,32 @@ export const LittleStar = styled.img`
     0% {
       opacity: 0;
     }
-    50% {
-      opacity: 1;
-    }
     100% {
-      opacity: 0;
+      opacity: 1;
     }
   }
 `;
 export const LeftBar = styled.img`
-  animation: leftBarAppearing 5s infinite;
+  animation: leftBarAppearing 5s;
 
   @keyframes leftBarAppearing {
     0% {
-      transform: translateX(-150%);
-    }
-    50% {
-      transform: translateX(0);
+      width: 0;
     }
     100% {
-      transform: translateX(-150%);
+      width: 100%;
     }
   }
 `;
 export const RightBar = styled.img`
-  animation: rightBarAppearing 5s infinite;
+  animation: rightBarAppearing 5s;
 
   @keyframes rightBarAppearing {
     0% {
-      transform: translateX(150%);
-    }
-    50% {
-      transform: translateX(0%);
+      width: 0;
     }
     100% {
-      transform: translateX(150%);
+      width: 100%;
     }
   }
 `;
