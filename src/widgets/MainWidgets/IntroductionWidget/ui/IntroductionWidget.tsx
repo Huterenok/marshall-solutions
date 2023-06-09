@@ -59,7 +59,7 @@ export const IntroductionWidget: FC = () => {
         </MouseParallaxContainer>
       </Content>
       <MouseImg src={Mouse} />
-      <TgIcon href="https://t.me/scou24" target="_blank">
+      <TgIcon target="_blank">
         <TgDefaultIcon src={tgDefaultIcon} />
         <TgActiveIcon src={tgActiveIcon} />
       </TgIcon>
