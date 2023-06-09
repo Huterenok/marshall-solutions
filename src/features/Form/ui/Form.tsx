@@ -26,7 +26,7 @@ export const Form: FC = () => {
   };
 
   return (
-    <Container ref={formRef}>
+    <Container onSubmit={handleSubmit} ref={formRef}>
       <InputData>
         <LiteralInputContainer>
           {inputs.map((item) => (
@@ -49,8 +49,8 @@ export const Form: FC = () => {
           1 Mb)
         </FileInputContainer>
       </InputData>
-      <ButtonWrapper onClick={handleSubmit}>
-        <Button size={ButtonSize.M} hoverColor={HoverColor.BLACK}>
+      <ButtonWrapper>
+        <Button submit={true} size={ButtonSize.M} hoverColor={HoverColor.BLACK}>
           Send
         </Button>
       </ButtonWrapper>
