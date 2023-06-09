@@ -1,7 +1,11 @@
 import { FC } from "react";
 
-import { Button, ButtonSize } from "shared/ui/Button/Button";
+import {
+  MouseParallaxChild,
+  MouseParallaxContainer,
+} from "react-parallax-mouse";
 
+import { Button, ButtonSize } from "shared/ui/Button/Button";
 import { Path } from "shared/config/paths";
 
 import {
@@ -10,6 +14,9 @@ import {
   Content,
   GroupImg,
   Information,
+  LeftBar,
+  RightBar,
+  LittleStar,
   MouseImg,
   StarImg,
   Subtitle,
@@ -18,7 +25,9 @@ import {
   TgIcon,
   Title,
 } from "./IntroductionWidget.styled";
-import Star from "./img/star.svg";
+import leftBar from "./img/leftBar.svg";
+import rightBar from "./img/rightBar.svg";
+import littleStar from "./img/littleStar.svg";
 import Mouse from "./img/mouse.svg";
 import Group from "./img/group.svg";
 import tgDefaultIcon from "widgets/Header/ui/img/tg.svg";
@@ -27,7 +36,11 @@ import tgActiveIcon from "widgets/Header/ui/img/tgActive.svg";
 export const IntroductionWidget: FC = () => {
   return (
     <Container>
-      <StarImg src={Star} />
+      <StarImg>
+        <LeftBar src={leftBar} />
+        <LittleStar src={littleStar} />
+        <RightBar src={rightBar} />
+      </StarImg>
       <Content>
         <Information>
           <Title>Blockchain solutions of any complexity</Title>
@@ -39,9 +52,13 @@ export const IntroductionWidget: FC = () => {
             <Button size={ButtonSize.L}>I’m looking for blockchain app</Button>
           </ButtonWrapper>
         </Information>
-        <GroupImg src={Group} />
+        <MouseParallaxContainer>
+          <MouseParallaxChild factorX={0.1} factorY={0.2}>
+            <GroupImg src={Group} />
+          </MouseParallaxChild>
+        </MouseParallaxContainer>
       </Content>
-      <MouseImg src={Mouse} data-aos="fade-up" />
+      <MouseImg src={Mouse} />
       <TgIcon href="https://t.me/scou24" target="_blank">
         <TgDefaultIcon src={tgDefaultIcon} />
         <TgActiveIcon src={tgActiveIcon} />

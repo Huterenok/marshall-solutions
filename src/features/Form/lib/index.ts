@@ -29,11 +29,11 @@ export const sendEmail = async (form: HTMLFormElement | null) => {
   // const res = await axios.post(import.meta.env.VITE_SERVER_URL, body);
   // console.log(res);
 
-  const name: string = form?.name.value || "";
-  const company: string = form?.company.value || "";
-  const email: string = form?.email.value || "";
-  const phone: string = form?.phone.value || "";
-  const file: File = form?.file.files[0] || "";
+  const name: string = form?.name.value;
+  const company: string = form?.company.value;
+  const email: string = form?.email.value;
+  const phone: string = form?.phone.value;
+  const file: File = form?.file.files[0];
 
   const text = `
    		Name: ${name}\n
@@ -46,7 +46,9 @@ export const sendEmail = async (form: HTMLFormElement | null) => {
   const formData = new FormData();
   formData.set("subject", subject);
   formData.set("text", text);
-  formData.set("user_file", file, file.name);
+  if (file) {
+    formData.set("user_file", file, file.name);
+  }
 
   const res = await axios.post(import.meta.env.VITE_SERVER_URL, formData, {
     headers: {

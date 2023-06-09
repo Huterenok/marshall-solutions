@@ -13,11 +13,63 @@ export const Container = styled.section`
   position: relative;
 `;
 
-export const StarImg = styled.img`
+export const StarImg = styled.div`
   width: 100%;
+
+  display: flex;
+  justify-content: center;
 
   @media (max-width: 1000px) {
     display: none;
+  }
+`;
+
+export const LittleStar = styled.img`
+  animation: starAppearing 5s infinite;
+
+  width: 44px;
+  height: 44px;
+
+  @keyframes starAppearing {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+`;
+export const LeftBar = styled.img`
+  animation: leftBarAppearing 5s infinite;
+
+  @keyframes leftBarAppearing {
+    0% {
+      transform: translateX(-150%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-150%);
+    }
+  }
+`;
+export const RightBar = styled.img`
+  animation: rightBarAppearing 5s infinite;
+
+  @keyframes rightBarAppearing {
+    0% {
+      transform: translateX(150%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(150%);
+    }
   }
 `;
 
@@ -132,13 +184,22 @@ export const MouseImg = styled.img`
   left: calc(50% - 12px);
   bottom: ${Indent.XL};
 
-  &[data-aos="fade-up"] {
-    -webkit-transform: translate3d(0, -30px, 0); // or another value you need
-    transform: translate3d(0, -30px, 0); // or another value you need
-  }
+  animation: moveUpDown 4s infinite;
 
   @media (max-width: 1000px) {
     display: none;
+  }
+
+  @keyframes moveUpDown {
+    0% {
+      bottom: ${Indent.XL};
+    }
+    50% {
+      bottom: 72px;
+    }
+    100% {
+      bottom: ${Indent.XL};
+    }
   }
 `;
 

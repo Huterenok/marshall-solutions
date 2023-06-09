@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from "react";
+import { FC, useRef } from "react";
 
 import { Button, ButtonSize, HoverColor } from "shared/ui/Button/Button";
 
