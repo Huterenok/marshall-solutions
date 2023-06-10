@@ -204,7 +204,7 @@ export const TgActiveIcon = styled.img`
   opacity: 0;
 
   position: absolute;
-  left: 0;
+  left: calc(50% - 12px);
   top: 0;
 
   transition: ${Transition.DEFAULT};

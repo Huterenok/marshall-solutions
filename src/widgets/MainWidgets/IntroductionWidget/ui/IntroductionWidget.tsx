@@ -51,7 +51,7 @@ export const IntroductionWidget: FC = () => {
         <ParallaxBlock />
       </Content>
       <MouseImg src={Mouse} />
-      <TgIcon target="_blank">
+      <TgIcon href="https://t.me/marshallsolutions" target="_blank">
         <TgDefaultIcon src={tgDefaultIcon} />
         <TgActiveIcon src={tgActiveIcon} />
       </TgIcon>
