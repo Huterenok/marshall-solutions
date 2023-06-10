@@ -8,8 +8,10 @@ export const CustomMouseParallaxContainer = styled(MouseParallaxContainer)`
 
   overflow: visible;
 
-  @media (max-width: 1300px) {
-    /* max-width: 700px; */
+  @media (max-width: 1000px) {
+    height: 200px;
+
+    padding: 0 55px;
   }
 `;
 export const GroupCircle = styled.img`
@@ -24,9 +26,16 @@ export const GroupCircle = styled.img`
     width: 48px;
     height: 48px;
   }
-  @media (max-width: 600px) {
-    left: 50px;
+  @media (max-width: 1000px) {
+    width: 17px;
+    width: 17px;
+
+    top: 10%;
+    left: calc(50% - 30% + 42px);
   }
+  /* @media (max-width: 600px) {
+    left: 50px;
+  } */
 `;
 export const GroupBigStar = styled.img`
   width: 100px;
@@ -47,10 +56,13 @@ export const GroupBigStar = styled.img`
     left: 400px;
   }
   @media (max-width: 1000px) {
-    top: 50px;
-    left: 600px;
+    width: 27px;
+    height: 27px;
+
+    top: 25px;
+    left: calc(50% + 77px);
   }
-  @media (max-width: 700px) {
+  /* @media (max-width: 700px) {
     top: 50px;
     left: 500px;
   }
@@ -65,7 +77,7 @@ export const GroupBigStar = styled.img`
   @media (max-width: 400px) {
     left: 250px;
     top: 75px;
-  }
+  } */
 `;
 export const GroupPanel = styled.img`
   width: 730px;
@@ -86,15 +98,19 @@ export const GroupPanel = styled.img`
     top: 0px;
   }
   @media (max-width: 1000px) {
-    left: 20%;
+    width: 200px;
+    height: 200px;
+
+    left: calc(50% - 50px);
+    top: 0px;
   }
-  @media (max-width: 600px) {
+  /* @media (max-width: 600px) {
     left: 10%;
     top: 50px;
   }
   @media (max-width: 500px) {
     top: 0px;
-  }
+  } */
 `;
 export const GroupRocket = styled.img`
   width: 204px;
@@ -114,17 +130,21 @@ export const GroupRocket = styled.img`
     left: 50px;
     top: 250px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 1000px) {
+    width: 57px;
+    height: 90px;
+
+    top: 100px;
+    left: calc(50% - 25% + 8px);
+  }
+  /* @media (max-width: 600px) {
     left: 10%;
     top: 300px;
   }
   @media (max-width: 500px) {
-    width: 115px;
-    height: 190px;
-
     top: 325px;
     left: 20%;
-  }
+  } */
 `;
 export const GroupSmallStar = styled.img`
   width: 74px;
@@ -144,5 +164,12 @@ export const GroupSmallStar = styled.img`
   @media (max-width: 1200px) {
     left: 250px;
     top: 450px;
+  }
+  @media (max-width: 1000px) {
+    width: 20px;
+    height: 24px;
+
+    left: calc(40% + 50px);
+    top: 175px;
   }
 `;
