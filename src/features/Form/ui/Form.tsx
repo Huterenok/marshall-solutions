@@ -22,11 +22,11 @@ export const Form: FC = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const handleSubmit = () => {
-    sendEmail(formRef.current);
+    sendEmail(formRef.current!);
   };
 
   return (
-    <Container onSubmit={handleSubmit} ref={formRef}>
+    <Container ref={formRef} onSubmit={handleSubmit}>
       <InputData>
         <LiteralInputContainer>
           {inputs.map((item) => (

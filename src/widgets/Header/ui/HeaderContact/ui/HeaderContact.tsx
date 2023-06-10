@@ -18,7 +18,7 @@ export const HeaderContact: FC = () => {
   return (
     <HeaderContactContainer>
       {/* FIX */}
-      <HeaderTelegram target="_blank">
+      <HeaderTelegram href="https://t.me/marshallsolutions" target="_blank">
         <TgDefaultIcon src={icon} />
         <TgActiveIcon src={activeIcon} />
       </HeaderTelegram>
