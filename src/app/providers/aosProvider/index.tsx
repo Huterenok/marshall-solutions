@@ -13,7 +13,7 @@ export const AosProvider: FC<AosProviderProps> = ({ children }) => {
       duration: 1000,
     });
 
-    emailJs.init("iJSKrXXBY_y9x7n7q");
+    emailJs.init(import.meta.env.VITE_PUBLIC_KEY);
   }, []);
 
   return children;
