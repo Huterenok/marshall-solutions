@@ -122,16 +122,12 @@ export const Title = styled.div`
 `;
 
 export const Subtitle = styled.div`
-  margin-top: ${Indent.M};
+  margin-top: ${Indent.S};
 
   font-size: ${FontSize.S};
   font-weight: ${FontWeight.WEAK};
   line-height: 22px;
   color: ${Color.GREY100};
-
-  @media (max-width: 1400px) {
-    margin-top: ${Indent.S};
-  }
 
   @media (max-width: 1000px) {
     margin-top: 12px;
