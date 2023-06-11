@@ -29,14 +29,5 @@ export const sendEmail = async (form: HTMLFormElement) => {
   });
   console.log(res);
 
-  //FRONT-VERSION
-  // emailJs
-  //   .sendForm(
-  //     import.meta.env.VITE_SERVICE,
-  //     import.meta.env.VITE_FORM,
-  //     form,
-  //     import.meta.env.VITE_PUBLIC_KEY
-  //   )
-  //   .then((res) => console.log(res))
-  //   .catch((err) => alert("File is too large"));
+  location.reload();
 };

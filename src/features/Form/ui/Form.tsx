@@ -23,10 +23,11 @@ export const Form: FC = () => {
 
   const handleSubmit = () => {
     sendEmail(formRef.current!);
+    //and then location.reload()
   };
 
   return (
-    <Container ref={formRef} onSubmit={handleSubmit}>
+    <Container ref={formRef}>
       <InputData>
         <LiteralInputContainer>
           {inputs.map((item) => (
@@ -49,8 +50,8 @@ export const Form: FC = () => {
           1 Mb)
         </FileInputContainer>
       </InputData>
-      <ButtonWrapper>
-        <Button submit={true} size={ButtonSize.M} hoverColor={HoverColor.BLACK}>
+      <ButtonWrapper onClick={handleSubmit}>
+        <Button size={ButtonSize.M} hoverColor={HoverColor.BLACK}>
           Send
         </Button>
       </ButtonWrapper>
